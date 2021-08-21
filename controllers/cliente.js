@@ -26,7 +26,7 @@ exports.cliente_details = (req, res, next) => {
 }
 
 exports.cliente_update = (req, res, next) => {
-    Cliente.findByIdAndUpdate(Number(req.query.id), {$set: req.query},
+    Cliente.findOneAndUpdate(Number(req.query.id), {$set: req.body},
         (err, cliente) => {
             if (err)
                 return next(new Error(`Ocorreu um erro: ${err}`));
