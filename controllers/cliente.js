@@ -18,24 +18,24 @@ exports.cliente_create = (req, res, next) => {
 }
 
 exports.cliente_details = (req, res, next) => {
-    Cliente.findById(req.params.id, (err, cliente) => {
+    Cliente.findById(Number(req.query.id), (err, cliente) => {
         if (err)
             return next(new Error(`Ocorreu um erro: ${err}`));
-        res.send(cliente);
+        res.send(cliente);                  
     });
 }
 
 exports.cliente_update = (req, res, next) => {
-    Cliente.findByIdAndUpdate(req.params.id, {$set: req.body},
+    Cliente.findByIdAndUpdate(Number(req.query.id), {$set: req.query},
         (err, cliente) => {
             if (err)
                 return next(new Error(`Ocorreu um erro: ${err}`));
-            res.send('Cliente alterado!');
+            res.send(`Cliente ${cliente} alterado!`);
     })
 }
 
 exports.cliente_delete = (req, res, next) => {
-    Cliente.findByIdAndDelete(req.params.id, (err => {
+    Cliente.findByIdAndDelete(req.body.id, (err => {
         if (err)
             return next(new Error(`Ocorreu um erro: ${err}`));
         res.send('Cliente excluído!');
