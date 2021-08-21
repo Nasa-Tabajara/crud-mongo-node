@@ -4,8 +4,8 @@ exports.test = (req, res) => res.send('Teste realizado com sucesso!');
 
 exports.venda_create = (req, res, next) => {
     const venda = new Venda({
-        id_fornecedor: req.body.id_fornecedor,
         id_cliente: req.body.id_cliente,
+        id_produto: req.body.id_produto,
         quantidade: req.body.quantidade,
         preco: req.body.preco,
         data_venda: Date.now().toString

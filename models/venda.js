@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 Schema = mongoose.Schema;
 
 const VendaSchema = new Schema({
-    id_fornecedor: {type: String, required: true},
+    id_produto: {type: String, required: true},
     id_cliente: {type: String, required: true},
     quantidade: {type: Number, required: true},
     preco: {type: Number, required: true},
