@@ -23,6 +23,8 @@ app.use('/fornecedores', fornecedor);
 app.use('/vendas', venda);
 app.use('/produtos', produto);
 
+app.use(express.static(__dirname + '/css'));
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
 });

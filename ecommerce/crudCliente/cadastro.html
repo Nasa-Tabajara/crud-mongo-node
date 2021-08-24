@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="/styles.css" type="text/css" />
     </head>
     <body>
+        <table>
+        <th colspan="2">
         <h1><a href="/">Home</a></h1>
+        </th>
         <form action="/clientes/create" method="post">
-            <div>
+            <tr>
+                <td class="teste">
                 <label for="id">ID:</label>
+                </td>
+                <td>
                 <input type="number" id="id" name ="id"/>
-            </div>
-            <div>
+                </td>
+                </tr>
+            </tr>
+            <td class="teste">
                 <label for="nome">Nome:</label>
+            </td>
+            <td>
                 <input type="text" id="nome" name ="nome"/>
-            </div>
-            <div>
+            </td>
+            </tr>
+            <tr>
+            <td class="teste">
                 <label for="telefone">Telefone:</label>
+            </td>
+            <td>
                 <input type="telefone" id="telefone" name ="telefone"/>
-            </div>
-            <div>
+            </td>
+            </tr>
+            <tr>
+                <td class="teste">
                 <label for="email">E-mail:</label>
+            </td>
+            <td>
                 <input type="email" id="email" name ="email"/>
-            </div>
-            <div class="button">
+            </td>
+            </tr>
+            <tr>
+                <th colspan="2"> 
                 <button type="submit">Cadastro</button>
-            </div>
+                </th>
+            </tr>
         </form>
+    </table>
     </body>
 </html>

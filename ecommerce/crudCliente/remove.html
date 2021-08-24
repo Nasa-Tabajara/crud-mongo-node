@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="/styles.css" type="text/css" />
     </head>
     <body>
-        <h1><a href="../index.html">Home</a></h1>
+    <div class = "form">
+        <h1><a href="/">Home</a></h1>
         <form action="/clientes/delete" method="post">
             <div>
+            <tr>
+            <td>
                 <label for="id">ID: </label>
+            </td>
+            <td>
                 <input type="text" id="nome" name= "id"/>
+            </td>
+            </tr>
             </div>
             <div class="button">
                 <button type="submit">Remover</button>
             </div>
         </form>
+    </div>
     </body>
 </html>

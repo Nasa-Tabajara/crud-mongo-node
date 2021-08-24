@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       
-
-    </head>
-    <body>
-        <h1><a href="/">Home</a></h1>
-        <form action= "/clientes/update" method="POST">
-            <div>
-                <label for="id">ID:</label>
-                <input type="number" id="id" name="id" />
-            </div>
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name= "nome" />
-            </div>
-            <div>
-                <label for="telefone">Telefone:</label>
-                <input type="telefone" id="telefone" name="telefone" />
-            </div>
-            <div>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email"/>
-            </div>
-            <div class="button">
-                <button type="submit">Atualizar</button>
-            </div>
-        </form>
+<head>
+    <link rel="stylesheet" href="/styles.css" type="text/css" />
+</head>
+<body>
+    <div>
+        <table>
+        <tr>
+            <th colspan="2"> 
+                <h1><a href="/">Home</a></h1>
+            </th>
+            </tr>
+            <tr>
+            <form action= "/clientes/update" method="POST">
+                    <td>
+                        <label for="id">ID:</label>
+                    </td>
+                    <td>
+                        <input type="number" id="id" name="id" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>    
+                        <label for="nome">Nome:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="nome" name= "nome" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="telefone">Telefone:</label>
+                    </td>
+                    <td>
+                        <input type="telefone" id="telefone" name="telefone" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">E-mail:</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"> 
+                        <button type="submit">Atualizar</button>
+                    </th>
+                    </tr>
+                </form>
+            </table>
+        </div>
     </body>
-</html>
+    </html>
